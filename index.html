@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<!-- Made by Kulit -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Kulit">
+  <meta name="description" content="Welcome to Coffee Shop - Serving the finest coffee, pizza, burgers, and more. Visit us for a warm, cozy experience with artisan pastries and premium beverages.">
+  <meta name="keywords" content="coffee shop, pizza, burgers, coffee, pastries, restaurant, cafe">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://coffeeshop.com">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Coffee Shop - Premium Coffee & Dining">
+  <meta property="og:description" content="Experience the finest coffee, delicious food, and warm hospitality at Coffee Shop.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=1200&h=630&fit=crop">
+  <meta property="og:url" content="https://coffeeshop.com">
+  <meta property="og:site_name" content="Coffee Shop">
+  <meta property="og:locale" content="en_US">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Coffee Shop - Premium Coffee & Dining">
+  <meta name="twitter:description" content="Experience the finest coffee, delicious food, and warm hospitality at Coffee Shop.">
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=1200&h=630&fit=crop">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☕</text></svg>">
+  
+  <title>Coffee Shop — Premium Coffee & Dining Experience</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Coffee Shop",
+    "description": "Premium coffee and dining experience serving the finest coffee, pizza, burgers, and more.",
+    "image": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=1200&h=630&fit=crop",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "123 Main Street",
+      "addressLocality": "Coffee City",
+      "addressRegion": "CC",
+      "postalCode": "12345",
+      "addressCountry": "US"
+    },
+    "telephone": "(555) 123-4567",
+    "email": "info@coffeeshop.com",
+    "url": "https://coffeeshop.com",
+    "servesCuisine": "Coffee, Pizza, Burgers, American",
+    "priceRange": "$$",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "07:00",
+        "closes": "19:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "08:00",
+        "closes": "20:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Sunday",
+        "opens": "09:00",
+        "closes": "18:00"
+      }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.5",
+      "reviewCount": "120"
+    }
+  }
+  </script>
+</head>
+<body>
+  <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="side-nav">
+    <span class="hamburger" aria-hidden="true">
+      <span></span>
+      <span></span>
+      <span></span>
+    </span>
+  </button>
+
+  <div class="nav-overlay" id="nav-overlay" aria-hidden="true"></div>
+
+  <!-- Floating Hearts Container -->
+  <div class="floating-hearts" id="floating-hearts" aria-hidden="true"></div>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top" title="Back to top">
+    <span>↑</span>
+  </button>
+
+  <nav class="side-nav" id="side-nav" role="navigation" aria-label="Main">
+    <div class="brand">
+      <!-- Logo: Add your logo.png file to the same folder as index.html -->
+      <!-- If logo.png doesn't exist, a coffee cup emoji will show as fallback -->
+      <div class="logo-container">
+        <img src="logo.png" alt="Coffee Shop Logo" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+        <div class="logo-placeholder" style="display: none;">☕</div>
+      </div>
+      <span class="brand-name">Coffee Shop</span>
+    </div>
+    <ul>
+      <li><a href="#home" class="active"><span class="icon" aria-hidden="true">☕</span> Home</a></li>
+      <li><a href="#menu"><span class="icon" aria-hidden="true">📋</span> Menu / Products</a></li>
+      <li><a href="#gallery"><span class="icon" aria-hidden="true">🖼️</span> Gallery</a></li>
+      <li><a href="#location"><span class="icon" aria-hidden="true">📍</span> Location</a></li>
+    </ul>
+  </nav>
+
+  <main class="main-content">
+    <!-- Home Section -->
+    <section id="home" class="content-section active">
+      <h1>Welcome to Coffee Shop</h1>
+      <p>We serve the finest coffee and pastries in town. Come visit us for a warm, cozy experience!</p>
+      
+      <!-- Special of the Week - Valentine's Day -->
+      <div class="special-of-week">
+        <div class="special-header">
+          <span class="special-icon" aria-hidden="true">💝</span>
+          <h2>Special of the Week</h2>
+          <span class="special-icon" aria-hidden="true">💝</span>
+        </div>
+        <div class="special-content">
+          <div class="special-badge">February Special</div>
+          <h3 class="special-title">Valentine's Day Romance Package</h3>
+          <p class="special-description">Share the love with our special Valentine's Day combo! Perfect for couples or treating yourself.</p>
+          <div class="special-items">
+            <div class="special-item">
+              <span class="item-icon">☕</span>
+              <div class="item-details">
+                <h4>Two Heart-Shaped Lattes</h4>
+                <p>Artfully crafted with love</p>
+              </div>
+            </div>
+            <div class="special-item">
+              <span class="item-icon">🍰</span>
+              <div class="item-details">
+                <h4>Red Velvet Cupcakes</h4>
+                <p>Made fresh daily</p>
+              </div>
+            </div>
+            <div class="special-item">
+              <span class="item-icon">🍫</span>
+              <div class="item-details">
+                <h4>Chocolate Truffles</h4>
+                <p>Premium Belgian chocolate</p>
+              </div>
+            </div>
+          </div>
+          <div class="special-price">
+            <span class="price-label">Special Price:</span>
+            <span class="price-amount">₱24.99</span>
+            <span class="price-note">(Save ₱5.00!)</span>
+          </div>
+          <div class="special-footer">
+            <p>💕 Available February 1-14, 2026 💕</p>
+            <div class="countdown-timer" id="countdown-timer">
+              <div class="countdown-label">⏰ Time Remaining:</div>
+              <div class="countdown-display">
+                <div class="countdown-item">
+                  <span class="countdown-number" id="days">00</span>
+                  <span class="countdown-label-small">Days</span>
+                </div>
+                <div class="countdown-separator">:</div>
+                <div class="countdown-item">
+                  <span class="countdown-number" id="hours">00</span>
+                  <span class="countdown-label-small">Hours</span>
+                </div>
+                <div class="countdown-separator">:</div>
+                <div class="countdown-item">
+                  <span class="countdown-number" id="minutes">00</span>
+                  <span class="countdown-label-small">Minutes</span>
+                </div>
+                <div class="countdown-separator">:</div>
+                <div class="countdown-item">
+                  <span class="countdown-number" id="seconds">00</span>
+                  <span class="countdown-label-small">Seconds</span>
+                </div>
+              </div>
+            </div>
+            <a href="#location" class="special-visit-btn">📍 Visit the Shop</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="feature-box">
+        <h2>Our Specialties</h2>
+        <ul>
+          <li>Freshly roasted coffee beans</li>
+          <li>Artisan pastries</li>
+          <li>Cozy atmosphere</li>
+          <li>Friendly service</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Menu / Products Section -->
+    <section id="menu" class="content-section">
+      <!-- Horizontal category tabs -->
+      <nav class="menu-category-tabs" role="tablist" aria-label="Menu categories">
+        <button type="button" class="menu-tab active" data-category="pizza" role="tab" aria-selected="true">
+          <span class="menu-tab-icon" aria-hidden="true">🍕</span>
+          <span>Pizza</span>
+        </button>
+        <button type="button" class="menu-tab" data-category="burgers" role="tab" aria-selected="false">
+          <span class="menu-tab-icon" aria-hidden="true">🍔</span>
+          <span>Burgers</span>
+        </button>
+        <button type="button" class="menu-tab" data-category="snacks" role="tab" aria-selected="false">
+          <span class="menu-tab-icon" aria-hidden="true">🍟</span>
+          <span>Snacks & Sides</span>
+        </button>
+        <button type="button" class="menu-tab" data-category="salads" role="tab" aria-selected="false">
+          <span class="menu-tab-icon" aria-hidden="true">🥗</span>
+          <span>Salads</span>
+        </button>
+        <button type="button" class="menu-tab" data-category="drinks" role="tab" aria-selected="false">
+          <span class="menu-tab-icon" aria-hidden="true">🥤</span>
+          <span>Drinks</span>
+        </button>
+      </nav>
+
+      <!-- Pizza category -->
+      <div class="menu-category-panel" id="panel-pizza" role="tabpanel">
+        <div class="menu-section-heading">
+          <span class="menu-section-icon" aria-hidden="true">🍕</span>
+          <h1>Pizza</h1>
+        </div>
+        <p class="menu-section-sizes">Slice / 32cm / 48cm</p>
+        <div class="menu-product-grid">
+          <article class="menu-product-card">
+            <div class="menu-product-img"><img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=200&h=200&fit=crop" alt="La Rossa pizza"></div>
+            <div class="menu-product-body">
+              <h3>La Rossa</h3>
+              <p>Tomato sauce, garlic, basil (no cheese)</p>
+              <span class="menu-product-price">₱5 / ₱15 / ₱24</span>
+            </div>
+          </article>
+          <article class="menu-product-card">
+            <div class="menu-product-img"><img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=200&h=200&fit=crop" alt="Burrata pizza"></div>
+            <div class="menu-product-body">
+              <h3>Burrata</h3>
+              <p>Tomato Sauce, burrata, garlic, basil</p>
+              <span class="menu-product-price">₱6 / ₱18 / ₱28</span>
+            </div>
+          </article>
+          <article class="menu-product-card">
+            <div class="menu-product-img"><img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=200&h=200&fit=crop" alt="Panna pizza"></div>
+            <div class="menu-product-body">
+              <h3>Panna</h3>
+              <p>Tomato sauce, fresh mozzarella, grass-fed PA cow's cream, arugula, parmigiano</p>
+              <span class="menu-product-price">₱6 / ₱18 / ₱28</span>
+            </div>
+          </article>
+          <article class="menu-product-card">
+            <div class="menu-product-img"><img src="https://images.unsplash.com/photo-1571407970349-bc81e7e96a2e?w=200&h=200&fit=crop" alt="Margherita pizza"></div>
+            <div class="menu-product-body">
+              <h3>Margherita <span class="product-badge" aria-label="vegetarian">🌿</span></h3>
+              <p>Tomato sauce, fresh mozzarella, basil, sea salt, California extra virgin olive oil</p>
+              <span class="menu-product-price">₱5 / ₱17 / ₱26</span>
+            </div>
+          </article>
+          <article class="menu-product-card">
+            <div class="menu-product-img"><img src="https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?w=200&h=200&fit=crop" alt="Jersey Margherita pizza"></div>
+            <div class="menu-product-body">
+              <h3>Jersey Margherita</h3>
+              <p>Crushed NJ tomatoes, Jersey Girl mozzarella, basil</p>
+              <span class="menu-product-price">₱6 / ₱19 / ₱30</span>
+            </div>
+          </article>
+          <article class="menu-product-card">
+            <div class="menu-product-img"><img src="https://images.unsplash.com/photo-1595704028172-9192117842e0?w=200&h=200&fit=crop" alt="Bosco pizza"></div>
+            <div class="menu-product-body">
+              <h3>Bosco <span class="product-badge" aria-label="mushroom">🍄</span></h3>
+              <p>Tomato sauce, fresh mozzarella, cremini mushrooms, fontina</p>
+              <span class="menu-product-price">₱5 / ₱17 / ₱25</span>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- Burgers category -->
+      <div class="menu-category-panel" id="panel-burgers" role="tabpanel">
+        <div class="menu-section-heading">
+          <span class="menu-section-icon" aria-hidden="true">🍔</span>
+          <h1>Burgers</h1>
+        </div>
+        <p class="menu-section-sizes">Single / Double</p>
+        <div class="menu-product-grid">
+          <article class="menu-product-card">
+            <div class="menu-product-img img-placeholder"><span>🍔</span></div>
+            <div class="menu-product-body">
+              <h3>Classic Burger</h3>
+              <p>Beef patty, lettuce, tomato, onion, pickles, house sauce</p>
+              <span class="menu-product-price">₱12 / ₱16</span>
+            </div>
+          </article>
+          <article class="menu-product-card">
+            <div class="menu-product-img img-placeholder"><span>🍔</span></div>
+            <div class="menu-product-body">
+              <h3>Cheese Burger</h3>
+              <p>Beef patty, cheddar, lettuce, tomato, house sauce</p>
+              <span class="menu-product-price">₱14 / ₱18</span>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- Snacks & Sides category -->
+      <div class="menu-category-panel" id="panel-snacks" role="tabpanel">
+        <div class="menu-section-heading">
+          <span class="menu-section-icon" aria-hidden="true">🍟</span>
+          <h1>Snacks & Sides</h1>
+        </div>
+        <p class="menu-section-sizes">Regular / Large</p>
+        <div class="menu-product-grid">
+          <article class="menu-product-card">
+            <div class="menu-product-img img-placeholder"><span>🍟</span></div>
+            <div class="menu-product-body">
+              <h3>Fries</h3>
+              <p>Golden crispy fries with sea salt</p>
+              <span class="menu-product-price">₱4 / ₱6</span>
+            </div>
+          </article>
+          <article class="menu-product-card">
+            <div class="menu-product-img img-placeholder"><span>🧅</span></div>
+            <div class="menu-product-body">
+              <h3>Onion Rings</h3>
+              <p>Beer-battered onion rings with ranch</p>
+              <span class="menu-product-price">₱6 / ₱9</span>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- Salads category -->
+      <div class="menu-category-panel" id="panel-salads" role="tabpanel">
+        <div class="menu-section-heading">
+          <span class="menu-section-icon" aria-hidden="true">🥗</span>
+          <h1>Salads</h1>
+        </div>
+        <p class="menu-section-sizes">Half / Full</p>
+        <div class="menu-product-grid">
+          <article class="menu-product-card">
+            <div class="menu-product-img img-placeholder"><span>🥗</span></div>
+            <div class="menu-product-body">
+              <h3>House Salad</h3>
+              <p>Mixed greens, cucumber, tomato, house vinaigrette</p>
+              <span class="menu-product-price">₱8 / ₱12</span>
+            </div>
+          </article>
+          <article class="menu-product-card">
+            <div class="menu-product-img img-placeholder"><span>🥗</span></div>
+            <div class="menu-product-body">
+              <h3>Caesar Salad</h3>
+              <p>Romaine, parmesan, croutons, Caesar dressing</p>
+              <span class="menu-product-price">₱10 / ₱14</span>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- Drinks category -->
+      <div class="menu-category-panel" id="panel-drinks" role="tabpanel">
+        <div class="menu-section-heading">
+          <span class="menu-section-icon" aria-hidden="true">🥤</span>
+          <h1>Drinks</h1>
+        </div>
+        <p class="menu-section-sizes">Small / Large</p>
+        <div class="menu-product-grid">
+          <article class="menu-product-card">
+            <div class="menu-product-img img-placeholder"><span>🥤</span></div>
+            <div class="menu-product-body">
+              <h3>Cola</h3>
+              <p>Chilled fountain cola</p>
+              <span class="menu-product-price">₱2.50 / ₱3.50</span>
+            </div>
+          </article>
+          <article class="menu-product-card">
+            <div class="menu-product-img img-placeholder"><span>🍋</span></div>
+            <div class="menu-product-body">
+              <h3>Lemonade</h3>
+              <p>Fresh squeezed lemonade</p>
+              <span class="menu-product-price">₱3.50 / ₱5</span>
+            </div>
+          </article>
+          <article class="menu-product-card">
+            <div class="menu-product-img img-placeholder"><span>☕</span></div>
+            <div class="menu-product-body">
+              <h3>Coffee</h3>
+              <p>Fresh brewed coffee</p>
+              <span class="menu-product-price">₱2.50 / ₱4</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="content-section">
+      <h1>Gallery</h1>
+      
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=400&h=400&fit=crop" alt="Coffee cup on table" loading="lazy">
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=400&h=400&fit=crop" alt="Coffee beans" loading="lazy">
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400&h=400&fit=crop" alt="Coffee shop interior" loading="lazy">
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?w=400&h=400&fit=crop" alt="Latte art" loading="lazy">
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400&h=400&fit=crop" alt="Coffee and pastries" loading="lazy">
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1517487881594-2787fef5ebf7?w=400&h=400&fit=crop" alt="Coffee preparation" loading="lazy">
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=400&h=400&fit=crop" alt="Coffee cup close up" loading="lazy">
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=400&h=400&fit=crop" alt="Coffee shop ambiance" loading="lazy">
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=400&h=400&fit=crop" alt="Espresso shot" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- Location Section -->
+    <section id="location" class="content-section">
+      <h1>Location</h1>
+      
+      <div class="location-info">
+        <div class="info-card">
+          <h2>📍 Address</h2>
+          <p>123 Main Street<br>
+          Coffee City, CC 12345<br>
+          United States</p>
+        </div>
+        
+        <div class="info-card">
+          <h2>🕐 Hours</h2>
+          <p><strong>Monday - Friday:</strong> 7:00 AM - 7:00 PM<br>
+          <strong>Saturday:</strong> 8:00 AM - 8:00 PM<br>
+          <strong>Sunday:</strong> 9:00 AM - 6:00 PM</p>
+        </div>
+        
+        <div class="info-card map-card">
+          <h2>🗺️ Map</h2>
+          <div class="map-container">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.184132191834!2d-73.98811768459418!3d40.75889597932681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sTimes%20Square!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus" 
+              width="100%" 
+              height="300" 
+              style="border:0; border-radius: 12px;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Coffee Shop Location Map">
+            </iframe>
+            <p class="map-note"><small>📍 Replace the embed URL above with your actual location's Google Maps embed code</small></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Info Section -->
+    <section id="contact" class="content-section">
+      <h1>Contact Info</h1>
+      
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h2>📞 Phone</h2>
+          <p>(555) 123-4567</p>
+        </div>
+        
+        <div class="contact-card">
+          <h2>✉️ Email</h2>
+          <p>info@coffeeshop.com</p>
+        </div>
+        
+        <div class="contact-card">
+          <h2>💬 Social Media</h2>
+          <p>
+            <a href="#" target="_blank">Facebook</a><br>
+            <a href="#" target="_blank">Instagram</a><br>
+            <a href="#" target="_blank">Twitter</a>
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Coffee Shop</h3>
+        <p>Your neighborhood coffee destination. Serving quality coffee, delicious food, and warm hospitality since 2020.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#location">Location</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Contact</h4>
+        <p>📍 123 Main Street<br>
+        Coffee City, CC 12345</p>
+        <p>📞 (555) 123-4567<br>
+        ✉️ info@coffeeshop.com</p>
+      </div>
+      <div class="footer-section">
+        <h4>Follow Us</h4>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook" target="_blank">Facebook</a>
+          <a href="#" aria-label="Instagram" target="_blank">Instagram</a>
+          <a href="#" aria-label="Twitter" target="_blank">Twitter</a>
+        </div>
+        <p class="footer-hours">🕐 Open Daily<br>
+        7:00 AM - 8:00 PM</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Coffee Shop. All rights reserved.</p>
+      <p class="signature">Kulit</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
