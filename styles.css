@@ -39,184 +39,6 @@ body {
   flex-direction: column;
 }
 
-/* Floating Hearts Animation */
-.floating-hearts {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 998;
-  overflow: hidden;
-}
-
-.floating-hearts > * {
-  pointer-events: auto;
-}
-
-.floating-heart {
-  position: absolute;
-  font-size: 2rem;
-  color: var(--valentine-pink);
-  opacity: 0;
-  pointer-events: auto;
-  user-select: none;
-  cursor: pointer;
-  animation: heartPopAndFloat 4s ease-out forwards;
-  filter: drop-shadow(0 2px 4px rgba(196, 30, 58, 0.3));
-  transform-origin: center center;
-  transition: transform 0.1s ease-out;
-}
-
-.floating-heart:hover {
-  transform: scale(1.15);
-  filter: drop-shadow(0 4px 8px rgba(196, 30, 58, 0.5));
-}
-
-.floating-heart:active {
-  transform: scale(0.95);
-}
-
-.floating-heart.pop {
-  animation: heartPop 0.5s ease-out forwards;
-  pointer-events: none;
-  z-index: 9999;
-  filter: drop-shadow(0 0 20px currentColor) drop-shadow(0 0 40px currentColor);
-}
-
-.floating-heart.heart-red {
-  color: var(--valentine-rose);
-}
-
-.floating-heart.heart-pink {
-  color: var(--valentine-pink);
-}
-
-.floating-heart.heart-light {
-  color: #ffb8d0;
-}
-
-@keyframes heartPopAndFloat {
-  0% {
-    opacity: 0;
-    transform: scale(0) translate(0, 0) rotate(0deg);
-  }
-  5% {
-    opacity: 1;
-    transform: scale(1.5) translate(0, calc(var(--float-distance, 800px) * -0.01)) rotate(-15deg);
-  }
-  10% {
-    opacity: 1;
-    transform: scale(1.8) translate(0, calc(var(--float-distance, 800px) * -0.02)) rotate(15deg);
-  }
-  15% {
-    opacity: 1;
-    transform: scale(1.2) translate(calc(var(--drift, 0px) * 0.1), calc(var(--float-distance, 800px) * -0.04)) rotate(-10deg);
-  }
-  20% {
-    opacity: 1;
-    transform: scale(1) translate(calc(var(--drift, 0px) * 0.2), calc(var(--float-distance, 800px) * -0.08)) rotate(8deg);
-  }
-  30% {
-    opacity: 1;
-    transform: scale(0.95) translate(calc(var(--drift, 0px) * 0.4), calc(var(--float-distance, 800px) * -0.15)) rotate(-5deg);
-  }
-  40% {
-    opacity: 1;
-    transform: scale(0.9) translate(calc(var(--drift, 0px) * 0.6), calc(var(--float-distance, 800px) * -0.25)) rotate(4deg);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(0.85) translate(calc(var(--drift, 0px) * 0.8), calc(var(--float-distance, 800px) * -0.4)) rotate(-3deg);
-  }
-  60% {
-    opacity: 1;
-    transform: scale(0.75) translate(calc(var(--drift, 0px) * 1), calc(var(--float-distance, 800px) * -0.55)) rotate(2deg);
-  }
-  70% {
-    opacity: 1;
-    transform: scale(0.65) translate(calc(var(--drift, 0px) * 1.2), calc(var(--float-distance, 800px) * -0.7)) rotate(-2deg);
-  }
-  80% {
-    opacity: 1;
-    transform: scale(0.55) translate(calc(var(--drift, 0px) * 1.4), calc(var(--float-distance, 800px) * -0.85)) rotate(1deg);
-  }
-  85% {
-    opacity: 1;
-    transform: scale(0.45) translate(calc(var(--drift, 0px) * 1.6), calc(var(--float-distance, 800px) * -0.92)) rotate(-1deg);
-  }
-  90% {
-    opacity: 0.8;
-    transform: scale(0.35) translate(calc(var(--drift, 0px) * 1.7), calc(var(--float-distance, 800px) * -0.96)) rotate(0deg);
-  }
-  95% {
-    opacity: 0.4;
-    transform: scale(0.25) translate(calc(var(--drift, 0px) * 1.8), calc(var(--float-distance, 800px) * -0.98)) rotate(0deg);
-  }
-  100% {
-    opacity: 0;
-    transform: scale(0.1) translate(calc(var(--drift, 0px) * 1.8), calc(var(--float-distance, 800px) * -1)) rotate(0deg);
-  }
-}
-
-@keyframes heartPop {
-  0% {
-    opacity: 1;
-    transform: scale(1) rotate(0deg);
-    filter: brightness(1);
-  }
-  20% {
-    opacity: 1;
-    transform: scale(1.5) rotate(90deg);
-    filter: brightness(1.5);
-  }
-  40% {
-    opacity: 1;
-    transform: scale(2.5) rotate(180deg);
-    filter: brightness(2) drop-shadow(0 0 20px currentColor);
-  }
-  60% {
-    opacity: 0.9;
-    transform: scale(3.5) rotate(270deg);
-    filter: brightness(2.5) drop-shadow(0 0 30px currentColor);
-  }
-  100% {
-    opacity: 0;
-    transform: scale(4) rotate(360deg);
-    filter: brightness(3) drop-shadow(0 0 40px currentColor);
-  }
-}
-
-/* Splash particles */
-.heart-splash {
-  position: fixed;
-  pointer-events: none;
-  font-size: 1rem;
-  z-index: 9998;
-  animation: splashParticle 0.8s ease-out forwards;
-  transform-origin: center center;
-  will-change: transform, opacity;
-}
-
-@keyframes splashParticle {
-  0% {
-    opacity: 1;
-    transform: scale(1) translate(0, 0) rotate(0deg);
-    filter: brightness(1) drop-shadow(0 0 8px currentColor);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1.2) translate(calc(var(--splash-x, 0) * 0.5), calc(var(--splash-y, 0) * 0.5)) rotate(calc(var(--splash-rotate, 0deg) * 0.5));
-    filter: brightness(1.5) drop-shadow(0 0 12px currentColor);
-  }
-  100% {
-    opacity: 0;
-    transform: scale(0.2) translate(var(--splash-x, 0), var(--splash-y, 0)) rotate(var(--splash-rotate, 360deg));
-    filter: brightness(0.5) drop-shadow(0 0 4px currentColor);
-  }
-}
-
 /* Mobile menu button */
 .nav-toggle {
   display: none;
@@ -950,6 +772,21 @@ body {
 }
 
 @media (max-width: 768px) {
+  .best-sellers-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+  }
+  .best-sellers-header h2 {
+    text-align: center;
+  }
+  .best-sellers-link {
+    width: 100%;
+    white-space: nowrap;
+    padding: 0.75rem 1rem;
+    text-align: center;
+  }
   .best-sellers-grid {
     grid-template-columns: 1fr;
   }
