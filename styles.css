@@ -283,46 +283,6 @@ img {
   flex-shrink: 0;
 }
 
-/* Barista photo at bottom of side nav — fits empty space on desktop/laptop */
-.nav-barista {
-  margin-top: auto;
-  padding: 1rem 1rem 1.5rem;
-  border-top: 1px solid rgba(255, 245, 247, 0.2);
-  flex-shrink: 0;
-  min-height: 0;
-  display: flex;
-  align-items: flex-end;
-}
-
-.nav-barista-hint {
-  display: none;
-}
-
-.nav-barista img {
-  width: 100%;
-  height: auto;
-  max-height: 280px;
-  object-fit: cover;
-  object-position: center top;
-  border-radius: 12px;
-  display: block;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
-}
-
-/* Desktop/laptop: barista fills bottom space perfectly (sidebar 280px wide) */
-@media (min-width: 769px) {
-  .nav-barista {
-    padding: 1.25rem 1rem 1.5rem;
-    cursor: default;
-  }
-  .nav-barista img {
-    max-height: min(42vh, 320px);
-    width: 100%;
-    object-fit: cover;
-    object-position: center center;
-  }
-}
-
 /* Main content area — offset when side nav is visible on desktop */
 .main-content {
   margin-left: var(--nav-width);
@@ -1776,23 +1736,6 @@ img {
     box-shadow: 4px 0 24px rgba(139, 41, 66, 0.4);
   }
 
-  /* Barista at bottom of nav on mobile — tap to switch boy/girl */
-  .nav-barista {
-    padding: 1rem 1rem max(1.5rem, env(safe-area-inset-bottom));
-    cursor: pointer;
-  }
-  .nav-barista img {
-    max-height: min(38vh, 240px);
-    object-position: center center;
-  }
-  .nav-barista-hint {
-    display: block;
-    text-align: center;
-    font-size: 0.8rem;
-    color: rgba(255, 245, 247, 0.8);
-    margin-top: 0.5rem;
-  }
-
   .main-content {
     margin-left: 0;
     padding: 5rem 1.25rem 2rem;
@@ -1909,7 +1852,7 @@ img {
   .special-price .price-regular,
   .special-price .price-amount,
   .special-price .price-note {
-    word-break: break-word;
+    word-break: break-word
   }
 
   /* Touch-friendly: min 44px tap targets */
