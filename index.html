@@ -9,14 +9,16 @@
   <meta name="keywords" content="coffee shop, pizza, burgers, coffee, pastries, restaurant, cafe">
   
   <!-- Canonical URL -->
-  <link rel="canonical" href="https://coffeeshop.com">
+  <!-- Tip: set this to your real domain when you deploy -->
+  <!-- <link rel="canonical" href="https://your-domain.com"> -->
   
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Coffee Shop - Premium Coffee & Dining">
   <meta property="og:description" content="Experience the finest coffee, delicious food, and warm hospitality at Coffee Shop.">
   <meta property="og:image" content="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=1200&h=630&fit=crop">
-  <meta property="og:url" content="https://coffeeshop.com">
+  <!-- Tip: set og:url to your real domain when you deploy -->
+  <!-- <meta property="og:url" content="https://your-domain.com"> -->
   <meta property="og:site_name" content="Coffee Shop">
   <meta property="og:locale" content="en_US">
   
@@ -45,15 +47,14 @@
     "image": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=1200&h=630&fit=crop",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "123 Main Street",
-      "addressLocality": "Coffee City",
-      "addressRegion": "CC",
-      "postalCode": "12345",
-      "addressCountry": "US"
+      "streetAddress": "Your Street Address",
+      "addressLocality": "Your City",
+      "addressRegion": "Your Province/State",
+      "postalCode": "Your ZIP/Postal Code",
+      "addressCountry": "PH"
     },
-    "telephone": "(555) 123-4567",
-    "email": "info@coffeeshop.com",
-    "url": "https://coffeeshop.com",
+    "telephone": "+63 XXX XXX XXXX",
+    "email": "your-email@example.com",
     "servesCuisine": "Coffee, Pizza, Burgers, American",
     "priceRange": "$$",
     "openingHoursSpecification": [
@@ -75,12 +76,7 @@
         "opens": "09:00",
         "closes": "18:00"
       }
-    ],
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.5",
-      "reviewCount": "120"
-    }
+    ]
   }
   </script>
 </head>
@@ -105,10 +101,9 @@
 
   <nav class="side-nav" id="side-nav" role="navigation" aria-label="Main">
     <div class="brand">
-      <!-- Logo: Add your logo.png file to the same folder as index.html -->
-      <!-- If logo.png doesn't exist, a coffee cup emoji will show as fallback -->
+      <!-- Logo: Put your logo at images/logo.png -->
       <div class="logo-container">
-        <img src="logo.png" alt="Coffee Shop Logo" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+        <img src="images/logo.png" alt="Coffee Shop Logo" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
         <div class="logo-placeholder" style="display: none;">☕</div>
       </div>
       <span class="brand-name">Coffee Shop</span>
@@ -127,7 +122,7 @@
       <h1>Welcome to Coffee Shop</h1>
       <p>We serve the finest coffee and pastries in town. Come visit us for a warm, cozy experience!</p>
       
-      <!-- Special of the Week - Valentine's Day -->
+      <!-- Special of the Week - package from menu with discount -->
       <div class="special-of-week">
         <div class="special-header">
           <span class="special-icon" aria-hidden="true">💝</span>
@@ -136,35 +131,37 @@
         </div>
         <div class="special-content">
           <div class="special-badge">February Special</div>
-          <h3 class="special-title">Valentine's Day Romance Package</h3>
-          <p class="special-description">Share the love with our special Valentine's Day combo! Perfect for couples or treating yourself.</p>
+          <h3 class="special-title">Share the Love Package</h3>
+          <p class="special-description">Our menu favourites bundled with a special discount. All items from our regular menu—this week only, pay less.</p>
           <div class="special-items">
             <div class="special-item">
-              <span class="item-icon">☕</span>
+              <span class="item-icon">🍽️</span>
               <div class="item-details">
-                <h4>Two Heart-Shaped Lattes</h4>
-                <p>Artfully crafted with love</p>
+                <h4>Chocolate Cake + Latte</h4>
+                <p>Chocolate Cake slice (₱125) + Latte small/large <span class="item-price-inline">(Menu: ₱220 / ₱250)</span></p>
               </div>
             </div>
             <div class="special-item">
-              <span class="item-icon">🍰</span>
+              <span class="item-icon">🍽️</span>
               <div class="item-details">
-                <h4>Red Velvet Cupcakes</h4>
-                <p>Made fresh daily</p>
+                <h4>Red Velvet + Lemonade</h4>
+                <p>Red Velvet slice (₱145) + Lemonade small/large <span class="item-price-inline">(Menu: ₱220 / ₱240)</span></p>
               </div>
             </div>
             <div class="special-item">
-              <span class="item-icon">🍫</span>
+              <span class="item-icon">🍗</span>
               <div class="item-details">
-                <h4>Chocolate Truffles</h4>
-                <p>Premium Belgian chocolate</p>
+                <h4>Classic Buffalo Wings (6 pcs)</h4>
+                <p>Spicy buffalo sauce with blue cheese or ranch <span class="item-price-inline">(Menu: ₱149)</span></p>
               </div>
             </div>
           </div>
           <div class="special-price">
-            <span class="price-label">Special Price:</span>
-            <span class="price-amount">₱24.99</span>
-            <span class="price-note">(Save ₱5.00!)</span>
+            <span class="price-label">Regular total (small drinks):</span>
+            <span class="price-regular" aria-label="regular price">₱589</span>
+            <span class="price-label">Special price:</span>
+            <span class="price-amount">₱529</span>
+            <span class="price-note">(Save ₱60!)</span>
           </div>
           <div class="special-footer">
             <p>💕 Available February 1-14, 2026 💕</p>
@@ -197,14 +194,64 @@
         </div>
       </div>
 
-      <div class="feature-box">
-        <h2>Our Specialties</h2>
-        <ul>
-          <li>Freshly roasted coffee beans</li>
-          <li>Artisan pastries</li>
-          <li>Cozy atmosphere</li>
-          <li>Friendly service</li>
-        </ul>
+      <div class="feature-box best-sellers">
+        <div class="best-sellers-header">
+          <h2>Best Sellers</h2>
+          <a class="best-sellers-link" href="#menu">View Menu</a>
+        </div>
+        <div class="best-sellers-grid">
+          <article class="best-seller-card">
+            <div class="best-seller-media">
+              <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&h=400&fit=crop" alt="Burrata + Cola combo" width="400" height="400" loading="lazy">
+            </div>
+            <div class="best-seller-info">
+              <div class="best-seller-top">
+                <h3>🍽️ Burrata + Cola <span class="product-badge bestseller" aria-label="best seller">Best Seller</span></h3>
+                <span class="best-seller-price">₱134 / ₱154</span>
+              </div>
+              <p>Burrata slice (₱89) + Pepsi Cola small or large</p>
+            </div>
+          </article>
+
+          <article class="best-seller-card">
+            <div class="best-seller-media">
+              <img src="images/pizza/pizza-pepperoni.png" alt="Pepperoni pizza" width="400" height="400" loading="lazy">
+            </div>
+            <div class="best-seller-info">
+              <div class="best-seller-top">
+                <h3>🍕 Pepperoni <span class="product-badge bestseller" aria-label="best seller">Best Seller</span></h3>
+                <span class="best-seller-price">₱95 / ₱299 / ₱499</span>
+              </div>
+              <p>Classic pepperoni with melted mozzarella and tomato sauce</p>
+            </div>
+          </article>
+
+          <article class="best-seller-card">
+            <div class="best-seller-media">
+              <img src="images/chicken/classic-buffalo.png" alt="Classic Buffalo Wings" width="400" height="400" loading="lazy">
+            </div>
+            <div class="best-seller-info">
+              <div class="best-seller-top">
+                <h3>🍗 Classic Buffalo Wings <span class="product-badge bestseller" aria-label="best seller">Best Seller</span></h3>
+                <span class="best-seller-price">₱149 / ₱269</span>
+              </div>
+              <p>Spicy buffalo sauce with blue cheese or ranch</p>
+            </div>
+          </article>
+
+          <article class="best-seller-card">
+            <div class="best-seller-media">
+              <img src="images/cakes/chocolate-cake.png" alt="Chocolate Cake" width="400" height="400" loading="lazy">
+            </div>
+            <div class="best-seller-info">
+              <div class="best-seller-top">
+                <h3>🍰 Chocolate Cake <span class="product-badge bestseller" aria-label="best seller">Best Seller</span></h3>
+                <span class="best-seller-price">₱125 / ₱699</span>
+              </div>
+              <p>Rich chocolate layers with ganache and chocolate curls</p>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -212,21 +259,21 @@
     <section id="menu" class="content-section">
       <!-- Horizontal category tabs -->
       <nav class="menu-category-tabs" role="tablist" aria-label="Menu categories">
-        <button type="button" class="menu-tab active" data-category="pizza" role="tab" aria-selected="true">
+        <button type="button" class="menu-tab active" data-category="combo" role="tab" aria-selected="true">
+          <span class="menu-tab-icon" aria-hidden="true">🍽️</span>
+          <span>Combo</span>
+        </button>
+        <button type="button" class="menu-tab" data-category="pizza" role="tab" aria-selected="false">
           <span class="menu-tab-icon" aria-hidden="true">🍕</span>
           <span>Pizza</span>
         </button>
-        <button type="button" class="menu-tab" data-category="burgers" role="tab" aria-selected="false">
-          <span class="menu-tab-icon" aria-hidden="true">🍔</span>
-          <span>Burgers</span>
-        </button>
         <button type="button" class="menu-tab" data-category="snacks" role="tab" aria-selected="false">
-          <span class="menu-tab-icon" aria-hidden="true">🍟</span>
-          <span>Snacks & Sides</span>
+          <span class="menu-tab-icon" aria-hidden="true">🍗</span>
+          <span>Chicken Wings</span>
         </button>
-        <button type="button" class="menu-tab" data-category="salads" role="tab" aria-selected="false">
-          <span class="menu-tab-icon" aria-hidden="true">🥗</span>
-          <span>Salads</span>
+        <button type="button" class="menu-tab" data-category="cakes" role="tab" aria-selected="false">
+          <span class="menu-tab-icon" aria-hidden="true">🍰</span>
+          <span>Cakes</span>
         </button>
         <button type="button" class="menu-tab" data-category="drinks" role="tab" aria-selected="false">
           <span class="menu-tab-icon" aria-hidden="true">🥤</span>
@@ -234,141 +281,176 @@
         </button>
       </nav>
 
+      <!-- Combo category (first) -->
+      <div class="menu-category-panel" id="panel-combo" role="tabpanel">
+        <div class="menu-section-heading">
+          <span class="menu-section-icon" aria-hidden="true">🍽️</span>
+          <h1>Combo</h1>
+        </div>
+        <p class="menu-category-desc">Great value—pizza slice or cake slice paired with your choice of drink (small or large).</p>
+        <p class="menu-section-sizes">Combo price: Small drink / Large drink</p>
+        <div class="menu-product-grid">
+          <article class="menu-product-card">
+            <div class="menu-product-img"><img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=200&h=200&fit=crop" alt="Pizza and drink" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';this.parentElement.classList.add('img-placeholder');"><span class="img-fallback" style="display:none" aria-hidden="true">🍕🥤</span></div>
+            <div class="menu-product-body">
+              <h3>Burrata + Cola <span class="product-badge bestseller" aria-label="best seller">Best Seller</span></h3>
+              <p>Burrata pizza slice (₱89) + Pepsi Cola small (₱45) or large (₱65)</p>
+              <span class="menu-product-price">₱134 / ₱154</span>
+            </div>
+          </article>
+          <article class="menu-product-card">
+            <div class="menu-product-img"><img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=200&h=200&fit=crop" alt="Pizza and coffee" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';this.parentElement.classList.add('img-placeholder');"><span class="img-fallback" style="display:none" aria-hidden="true">🍕☕</span></div>
+            <div class="menu-product-body">
+              <h3>Margherita + Coffee</h3>
+              <p>Margherita slice (₱89) + Coffee small (₱95) or large (₱125)</p>
+              <span class="menu-product-price">₱184 / ₱214</span>
+            </div>
+          </article>
+          <article class="menu-product-card">
+            <div class="menu-product-img"><img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?w=200&h=200&fit=crop" alt="Cake and latte" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';this.parentElement.classList.add('img-placeholder');"><span class="img-fallback" style="display:none" aria-hidden="true">🍰☕</span></div>
+            <div class="menu-product-body">
+              <h3>Chocolate Cake + Latte</h3>
+              <p>Chocolate Cake slice (₱125) + Latte small (₱95) or large (₱125)</p>
+              <span class="menu-product-price">₱220 / ₱250</span>
+            </div>
+          </article>
+          <article class="menu-product-card">
+            <div class="menu-product-img"><img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?w=200&h=200&fit=crop" alt="Cake and lemonade" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';this.parentElement.classList.add('img-placeholder');"><span class="img-fallback" style="display:none" aria-hidden="true">🍰🥤</span></div>
+            <div class="menu-product-body">
+              <h3>Red Velvet + Lemonade</h3>
+              <p>Red Velvet slice (₱145) + Lemonade small (₱75) or large (₱95)</p>
+              <span class="menu-product-price">₱220 / ₱240</span>
+            </div>
+          </article>
+        </div>
+      </div>
+
       <!-- Pizza category -->
       <div class="menu-category-panel" id="panel-pizza" role="tabpanel">
         <div class="menu-section-heading">
           <span class="menu-section-icon" aria-hidden="true">🍕</span>
           <h1>Pizza</h1>
         </div>
+        <p class="menu-category-desc">Wood-fired classics with fresh mozzarella and signature sauces.</p>
         <p class="menu-section-sizes">Slice / 32cm / 48cm</p>
         <div class="menu-product-grid">
           <article class="menu-product-card">
-            <div class="menu-product-img"><img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=200&h=200&fit=crop" alt="La Rossa pizza"></div>
+            <div class="menu-product-img"><img src="images/pizza/pizza-pepperoni.png" alt="Pepperoni pizza" width="200" height="200" loading="lazy"></div>
             <div class="menu-product-body">
-              <h3>La Rossa</h3>
-              <p>Tomato sauce, garlic, basil (no cheese)</p>
-              <span class="menu-product-price">₱5 / ₱15 / ₱24</span>
+              <h3>Pepperoni <span class="product-badge bestseller" aria-label="best seller">Best Seller</span></h3>
+              <p>Classic pepperoni with melted mozzarella and tomato sauce</p>
+              <span class="menu-product-price">₱95 / ₱299 / ₱499</span>
             </div>
           </article>
           <article class="menu-product-card">
-            <div class="menu-product-img"><img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=200&h=200&fit=crop" alt="Burrata pizza"></div>
+            <div class="menu-product-img"><img src="images/pizza/pizza-margherita.png" alt="Margherita pizza" width="200" height="200" loading="lazy"></div>
             <div class="menu-product-body">
-              <h3>Burrata</h3>
-              <p>Tomato Sauce, burrata, garlic, basil</p>
-              <span class="menu-product-price">₱6 / ₱18 / ₱28</span>
+              <h3>Margherita <span class="product-badge veg" aria-label="vegetarian">🌿 Veg</span></h3>
+              <p>Tomato sauce, fresh mozzarella, basil, sea salt, extra virgin olive oil</p>
+              <span class="menu-product-price">₱89 / ₱279 / ₱459</span>
             </div>
           </article>
           <article class="menu-product-card">
-            <div class="menu-product-img"><img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=200&h=200&fit=crop" alt="Panna pizza"></div>
+            <div class="menu-product-img"><img src="images/pizza/pizza-cheese-basil.png" alt="Cheese & Basil pizza" width="200" height="200" loading="lazy"></div>
             <div class="menu-product-body">
-              <h3>Panna</h3>
-              <p>Tomato sauce, fresh mozzarella, grass-fed PA cow's cream, arugula, parmigiano</p>
-              <span class="menu-product-price">₱6 / ₱18 / ₱28</span>
+              <h3>Cheese & Basil</h3>
+              <p>Rich tomato sauce, melted mozzarella, fresh basil</p>
+              <span class="menu-product-price">₱89 / ₱269 / ₱449</span>
             </div>
           </article>
           <article class="menu-product-card">
-            <div class="menu-product-img"><img src="https://images.unsplash.com/photo-1571407970349-bc81e7e96a2e?w=200&h=200&fit=crop" alt="Margherita pizza"></div>
+            <div class="menu-product-img"><img src="images/pizza/pizza-classic.png" alt="Classic Pepperoni pizza" width="200" height="200" loading="lazy"></div>
             <div class="menu-product-body">
-              <h3>Margherita <span class="product-badge" aria-label="vegetarian">🌿</span></h3>
-              <p>Tomato sauce, fresh mozzarella, basil, sea salt, California extra virgin olive oil</p>
-              <span class="menu-product-price">₱5 / ₱17 / ₱26</span>
-            </div>
-          </article>
-          <article class="menu-product-card">
-            <div class="menu-product-img"><img src="https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?w=200&h=200&fit=crop" alt="Jersey Margherita pizza"></div>
-            <div class="menu-product-body">
-              <h3>Jersey Margherita</h3>
-              <p>Crushed NJ tomatoes, Jersey Girl mozzarella, basil</p>
-              <span class="menu-product-price">₱6 / ₱19 / ₱30</span>
-            </div>
-          </article>
-          <article class="menu-product-card">
-            <div class="menu-product-img"><img src="https://images.unsplash.com/photo-1595704028172-9192117842e0?w=200&h=200&fit=crop" alt="Bosco pizza"></div>
-            <div class="menu-product-body">
-              <h3>Bosco <span class="product-badge" aria-label="mushroom">🍄</span></h3>
-              <p>Tomato sauce, fresh mozzarella, cremini mushrooms, fontina</p>
-              <span class="menu-product-price">₱5 / ₱17 / ₱25</span>
+              <h3>Classic Pepperoni</h3>
+              <p>Wood-fired crust with pepperoni and gooey cheese</p>
+              <span class="menu-product-price">₱95 / ₱299 / ₱499</span>
             </div>
           </article>
         </div>
       </div>
 
-      <!-- Burgers category -->
-      <div class="menu-category-panel" id="panel-burgers" role="tabpanel">
-        <div class="menu-section-heading">
-          <span class="menu-section-icon" aria-hidden="true">🍔</span>
-          <h1>Burgers</h1>
-        </div>
-        <p class="menu-section-sizes">Single / Double</p>
-        <div class="menu-product-grid">
-          <article class="menu-product-card">
-            <div class="menu-product-img img-placeholder"><span>🍔</span></div>
-            <div class="menu-product-body">
-              <h3>Classic Burger</h3>
-              <p>Beef patty, lettuce, tomato, onion, pickles, house sauce</p>
-              <span class="menu-product-price">₱12 / ₱16</span>
-            </div>
-          </article>
-          <article class="menu-product-card">
-            <div class="menu-product-img img-placeholder"><span>🍔</span></div>
-            <div class="menu-product-body">
-              <h3>Cheese Burger</h3>
-              <p>Beef patty, cheddar, lettuce, tomato, house sauce</p>
-              <span class="menu-product-price">₱14 / ₱18</span>
-            </div>
-          </article>
-        </div>
-      </div>
-
-      <!-- Snacks & Sides category -->
+      <!-- Chicken Wings category -->
       <div class="menu-category-panel" id="panel-snacks" role="tabpanel">
         <div class="menu-section-heading">
-          <span class="menu-section-icon" aria-hidden="true">🍟</span>
-          <h1>Snacks & Sides</h1>
+          <h1>Chicken Wings</h1>
         </div>
-        <p class="menu-section-sizes">Regular / Large</p>
+        <p class="menu-category-desc">Crispy, saucy wings—perfect for sharing.</p>
+        <p class="menu-section-sizes">6 pcs / 12 pcs</p>
         <div class="menu-product-grid">
           <article class="menu-product-card">
-            <div class="menu-product-img img-placeholder"><span>🍟</span></div>
+            <div class="menu-product-img"><img src="images/chicken/classic-buffalo.png" alt="Classic Buffalo Wings" width="200" height="200" loading="lazy"></div>
             <div class="menu-product-body">
-              <h3>Fries</h3>
-              <p>Golden crispy fries with sea salt</p>
-              <span class="menu-product-price">₱4 / ₱6</span>
+              <h3>Classic Buffalo Wings <span class="product-badge bestseller" aria-label="best seller">Best Seller</span></h3>
+              <p>Spicy buffalo sauce with blue cheese or ranch</p>
+              <span class="menu-product-price">₱149 / ₱269</span>
             </div>
           </article>
           <article class="menu-product-card">
-            <div class="menu-product-img img-placeholder"><span>🧅</span></div>
+            <div class="menu-product-img"><img src="images/chicken/honey-garlic.png" alt="Honey Garlic Wings" width="200" height="200" loading="lazy"></div>
             <div class="menu-product-body">
-              <h3>Onion Rings</h3>
-              <p>Beer-battered onion rings with ranch</p>
-              <span class="menu-product-price">₱6 / ₱9</span>
+              <h3>Honey Garlic Wings</h3>
+              <p>Sweet and sticky honey garlic glaze</p>
+              <span class="menu-product-price">₱149 / ₱269</span>
+            </div>
+          </article>
+          <article class="menu-product-card">
+            <div class="menu-product-img"><img src="images/chicken/smoky-bbq.png" alt="Smoky BBQ Wings" width="200" height="200" loading="lazy"></div>
+            <div class="menu-product-body">
+              <h3>Smoky BBQ Wings <span class="product-badge spicy" aria-label="spicy">🌶️ Spicy</span></h3>
+              <p>Smoky BBQ sauce, mild or spicy</p>
+              <span class="menu-product-price">₱149 / ₱269</span>
+            </div>
+          </article>
+          <article class="menu-product-card">
+            <div class="menu-product-img"><img src="images/chicken/garlic-parmesan.png" alt="Garlic Parmesan Wings" width="200" height="200" loading="lazy"></div>
+            <div class="menu-product-body">
+              <h3>Garlic Parmesan Wings</h3>
+              <p>Crispy wings tossed in garlic butter and parmesan</p>
+              <span class="menu-product-price">₱149 / ₱269</span>
             </div>
           </article>
         </div>
       </div>
 
-      <!-- Salads category -->
-      <div class="menu-category-panel" id="panel-salads" role="tabpanel">
+      <!-- Cakes category -->
+      <div class="menu-category-panel" id="panel-cakes" role="tabpanel">
         <div class="menu-section-heading">
-          <span class="menu-section-icon" aria-hidden="true">🥗</span>
-          <h1>Salads</h1>
+          <span class="menu-section-icon" aria-hidden="true">🍰</span>
+          <h1>Cakes</h1>
         </div>
-        <p class="menu-section-sizes">Half / Full</p>
+        <p class="menu-category-desc">Homemade cakes and slices—perfect with coffee.</p>
+        <p class="menu-section-sizes">Slice / Whole</p>
         <div class="menu-product-grid">
           <article class="menu-product-card">
-            <div class="menu-product-img img-placeholder"><span>🥗</span></div>
+            <div class="menu-product-img"><img src="images/cakes/chocolate-cake.png" alt="Chocolate Cake" width="200" height="200" loading="lazy"></div>
             <div class="menu-product-body">
-              <h3>House Salad</h3>
-              <p>Mixed greens, cucumber, tomato, house vinaigrette</p>
-              <span class="menu-product-price">₱8 / ₱12</span>
+              <h3>Chocolate Cake <span class="product-badge bestseller" aria-label="best seller">Best Seller</span></h3>
+              <p>Rich chocolate layers with ganache and chocolate curls</p>
+              <span class="menu-product-price">₱125 / ₱699</span>
             </div>
           </article>
           <article class="menu-product-card">
-            <div class="menu-product-img img-placeholder"><span>🥗</span></div>
+            <div class="menu-product-img"><img src="images/cakes/carrot-cake.png" alt="Carrot Cake" width="200" height="200" loading="lazy"></div>
             <div class="menu-product-body">
-              <h3>Caesar Salad</h3>
-              <p>Romaine, parmesan, croutons, Caesar dressing</p>
-              <span class="menu-product-price">₱10 / ₱14</span>
+              <h3>Carrot Cake</h3>
+              <p>Spiced carrot cake with walnuts and cream cheese frosting</p>
+              <span class="menu-product-price">₱135 / ₱749</span>
+            </div>
+          </article>
+          <article class="menu-product-card">
+            <div class="menu-product-img"><img src="images/cakes/red-velvet.png" alt="Red Velvet cake" width="200" height="200" loading="lazy"></div>
+            <div class="menu-product-body">
+              <h3>Red Velvet <span class="product-badge veg" aria-label="vegetarian">🌿 Veg</span></h3>
+              <p>Classic red velvet with cream cheese frosting</p>
+              <span class="menu-product-price">₱145 / ₱799</span>
+            </div>
+          </article>
+          <article class="menu-product-card">
+            <div class="menu-product-img"><img src="images/cakes/cheesecake.png" alt="Cheesecake" width="200" height="200" loading="lazy"></div>
+            <div class="menu-product-body">
+              <h3>Cheesecake</h3>
+              <p>New York–style cheesecake with cherry topping</p>
+              <span class="menu-product-price">₱155 / ₱849</span>
             </div>
           </article>
         </div>
@@ -380,30 +462,39 @@
           <span class="menu-section-icon" aria-hidden="true">🥤</span>
           <h1>Drinks</h1>
         </div>
+        <p class="menu-category-desc">Hot or cold—pair your meal with something refreshing.</p>
         <p class="menu-section-sizes">Small / Large</p>
         <div class="menu-product-grid">
           <article class="menu-product-card">
-            <div class="menu-product-img img-placeholder"><span>🥤</span></div>
+            <div class="menu-product-img"><img src="images/drinks/pepsi-cola.png" alt="Pepsi Cola" width="200" height="200" loading="lazy"></div>
             <div class="menu-product-body">
-              <h3>Cola</h3>
-              <p>Chilled fountain cola</p>
-              <span class="menu-product-price">₱2.50 / ₱3.50</span>
+              <h3>Pepsi Cola</h3>
+              <p>Chilled Pepsi cola</p>
+              <span class="menu-product-price">₱45 / ₱65</span>
             </div>
           </article>
           <article class="menu-product-card">
-            <div class="menu-product-img img-placeholder"><span>🍋</span></div>
+            <div class="menu-product-img"><img src="images/drinks/coffee.png" alt="Coffee" width="200" height="200" loading="lazy"></div>
+            <div class="menu-product-body">
+              <h3>Coffee <span class="product-badge bestseller" aria-label="best seller">Best Seller</span></h3>
+              <p>Fresh brewed coffee with latte art</p>
+              <span class="menu-product-price">₱95 / ₱125</span>
+            </div>
+          </article>
+          <article class="menu-product-card">
+            <div class="menu-product-img"><img src="images/drinks/lemonade.png" alt="Lemonade" width="200" height="200" loading="lazy"></div>
             <div class="menu-product-body">
               <h3>Lemonade</h3>
-              <p>Fresh squeezed lemonade</p>
-              <span class="menu-product-price">₱3.50 / ₱5</span>
+              <p>Fresh squeezed lemonade with mint</p>
+              <span class="menu-product-price">₱75 / ₱95</span>
             </div>
           </article>
           <article class="menu-product-card">
-            <div class="menu-product-img img-placeholder"><span>☕</span></div>
+            <div class="menu-product-img"><img src="images/drinks/iced-coffee.png" alt="Iced Coffee" width="200" height="200" loading="lazy"></div>
             <div class="menu-product-body">
-              <h3>Coffee</h3>
-              <p>Fresh brewed coffee</p>
-              <span class="menu-product-price">₱2.50 / ₱4</span>
+              <h3>Iced Coffee</h3>
+              <p>Cold brew over ice with cream</p>
+              <span class="menu-product-price">₱105 / ₱135</span>
             </div>
           </article>
         </div>
@@ -416,31 +507,31 @@
       
       <div class="gallery-grid">
         <div class="gallery-item">
-          <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=400&h=400&fit=crop" alt="Coffee cup on table" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=400&h=400&fit=crop" alt="Coffee cup on table" width="400" height="400" loading="lazy">
         </div>
         <div class="gallery-item">
-          <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=400&h=400&fit=crop" alt="Coffee beans" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=400&h=400&fit=crop" alt="Coffee beans" width="400" height="400" loading="lazy">
         </div>
         <div class="gallery-item">
-          <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400&h=400&fit=crop" alt="Coffee shop interior" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400&h=400&fit=crop" alt="Coffee shop interior" width="400" height="400" loading="lazy">
         </div>
         <div class="gallery-item">
-          <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?w=400&h=400&fit=crop" alt="Latte art" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?w=400&h=400&fit=crop" alt="Latte art" width="400" height="400" loading="lazy">
         </div>
         <div class="gallery-item">
-          <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400&h=400&fit=crop" alt="Coffee and pastries" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400&h=400&fit=crop" alt="Coffee and pastries" width="400" height="400" loading="lazy">
         </div>
         <div class="gallery-item">
-          <img src="https://images.unsplash.com/photo-1517487881594-2787fef5ebf7?w=400&h=400&fit=crop" alt="Coffee preparation" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1517487881594-2787fef5ebf7?w=400&h=400&fit=crop" alt="Coffee preparation" width="400" height="400" loading="lazy">
         </div>
         <div class="gallery-item">
-          <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=400&h=400&fit=crop" alt="Coffee cup close up" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=400&h=400&fit=crop" alt="Coffee cup close up" width="400" height="400" loading="lazy">
         </div>
         <div class="gallery-item">
-          <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=400&h=400&fit=crop" alt="Coffee shop ambiance" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=400&h=400&fit=crop" alt="Coffee shop ambiance" width="400" height="400" loading="lazy">
         </div>
         <div class="gallery-item">
-          <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=400&h=400&fit=crop" alt="Espresso shot" loading="lazy">
+          <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=400&h=400&fit=crop" alt="Espresso shot" width="400" height="400" loading="lazy">
         </div>
       </div>
     </section>
@@ -452,9 +543,9 @@
       <div class="location-info">
         <div class="info-card">
           <h2>📍 Address</h2>
-          <p>123 Main Street<br>
-          Coffee City, CC 12345<br>
-          United States</p>
+          <p>Your Street Address<br>
+          Your City, Your Province, Your ZIP<br>
+          Philippines</p>
         </div>
         
         <div class="info-card">
@@ -468,16 +559,17 @@
           <h2>🗺️ Map</h2>
           <div class="map-container">
             <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.184132191834!2d-73.98811768459418!3d40.75889597932681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sTimes%20Square!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus" 
-              width="100%" 
-              height="300" 
+              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d235.76220242161503!2d125.64631153902279!3d5.917776629802584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sph!4v1769581071998!5m2!1sen!2sph"
+              width="800" 
+              height="600" 
               style="border:0; border-radius: 12px;" 
               allowfullscreen="" 
               loading="lazy" 
               referrerpolicy="no-referrer-when-downgrade"
               title="Coffee Shop Location Map">
             </iframe>
-            <p class="map-note"><small>📍 Replace the embed URL above with your actual location's Google Maps embed code</small></p>
+            <p class="map-note"><small>📍 Map updated to your location</small></p>
+            <a class="directions-btn" href="https://www.google.com/maps?q=5.917776629802584,125.64631153902279" target="_blank" rel="noopener noreferrer">🧭 Get Directions</a>
           </div>
         </div>
       </div>
@@ -490,20 +582,20 @@
       <div class="contact-grid">
         <div class="contact-card">
           <h2>📞 Phone</h2>
-          <p>(555) 123-4567</p>
+          <p>+63 XXX XXX XXXX</p>
         </div>
         
         <div class="contact-card">
           <h2>✉️ Email</h2>
-          <p>info@coffeeshop.com</p>
+          <p>your-email@example.com</p>
         </div>
         
         <div class="contact-card">
           <h2>💬 Social Media</h2>
           <p>
-            <a href="#" target="_blank">Facebook</a><br>
-            <a href="#" target="_blank">Instagram</a><br>
-            <a href="#" target="_blank">Twitter</a>
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a><br>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a><br>
+            <a href="https://www.tiktok.com/" target="_blank" rel="noopener noreferrer">TikTok</a>
           </p>
         </div>
       </div>
@@ -524,25 +616,26 @@
           <li><a href="#menu">Menu</a></li>
           <li><a href="#gallery">Gallery</a></li>
           <li><a href="#location">Location</a></li>
-          <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
       <div class="footer-section">
         <h4>Contact</h4>
-        <p>📍 123 Main Street<br>
-        Coffee City, CC 12345</p>
-        <p>📞 (555) 123-4567<br>
-        ✉️ info@coffeeshop.com</p>
+        <p>📍 Your Street Address<br>
+        Your City, Your Province, Your ZIP</p>
+        <p>📞 +63 XXX XXX XXXX<br>
+        ✉️ your-email@example.com</p>
       </div>
       <div class="footer-section">
         <h4>Follow Us</h4>
         <div class="social-links">
-          <a href="#" aria-label="Facebook" target="_blank">Facebook</a>
-          <a href="#" aria-label="Instagram" target="_blank">Instagram</a>
-          <a href="#" aria-label="Twitter" target="_blank">Twitter</a>
+          <a href="https://www.facebook.com/" aria-label="Facebook" target="_blank" rel="noopener noreferrer">Facebook</a>
+          <a href="https://www.instagram.com/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://www.tiktok.com/" aria-label="TikTok" target="_blank" rel="noopener noreferrer">TikTok</a>
         </div>
-        <p class="footer-hours">🕐 Open Daily<br>
-        7:00 AM - 8:00 PM</p>
+        <p class="footer-hours">🕐 Hours<br>
+        Mon–Fri 7:00 AM – 7:00 PM<br>
+        Sat 8:00 AM – 8:00 PM<br>
+        Sun 9:00 AM – 6:00 PM</p>
       </div>
     </div>
     <div class="footer-bottom">
@@ -550,6 +643,16 @@
       <p class="signature">Kulit</p>
     </div>
   </footer>
+
+  <!-- Gallery & Product Image Lightbox (must be before script) -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <div class="lightbox-backdrop" data-lightbox-close></div>
+    <div class="lightbox-content" role="dialog" aria-modal="true" aria-label="Image preview">
+      <button type="button" class="lightbox-close" aria-label="Close image" data-lightbox-close>×</button>
+      <img id="lightbox-img" alt="">
+      <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
