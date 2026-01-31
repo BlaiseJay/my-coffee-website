@@ -49,6 +49,49 @@ img {
   display: block;
 }
 
+/* Skip to main content (accessibility – visible on focus) */
+.skip-link {
+  position: absolute;
+  top: -3rem;
+  left: 1rem;
+  z-index: 9999;
+  padding: 0.6rem 1rem;
+  background: var(--valentine-wine);
+  color: var(--nav-text);
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: top 0.2s var(--ease);
+}
+.skip-link:focus {
+  top: 1rem;
+  outline: 3px solid var(--nav-hover);
+  outline-offset: 2px;
+}
+
+/* Contact links (replace tel/mailto when you have real contact) */
+.contact-link,
+.footer-contact-link {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.contact-link:hover,
+.footer-contact-link:hover {
+  color: var(--valentine-rose);
+}
+.contact-link:focus-visible,
+.footer-contact-link:focus-visible {
+  outline: 2px solid var(--valentine-pink);
+  outline-offset: 2px;
+}
+
+/* Better keyboard focus (visible ring, no ring on mouse) */
+:focus { outline: 2px solid var(--valentine-pink); outline-offset: 2px; }
+:focus:not(:focus-visible) { outline: none; }
+:focus-visible { outline: 2px solid var(--valentine-pink); outline-offset: 2px; }
+
 /* Mobile menu button */
 .nav-toggle {
   display: none;
@@ -238,6 +281,46 @@ img {
   justify-content: center;
   font-size: 1.1rem;
   flex-shrink: 0;
+}
+
+/* Barista photo at bottom of side nav — fits empty space on desktop/laptop */
+.nav-barista {
+  margin-top: auto;
+  padding: 1rem 1rem 1.5rem;
+  border-top: 1px solid rgba(255, 245, 247, 0.2);
+  flex-shrink: 0;
+  min-height: 0;
+  display: flex;
+  align-items: flex-end;
+}
+
+.nav-barista-hint {
+  display: none;
+}
+
+.nav-barista img {
+  width: 100%;
+  height: auto;
+  max-height: 280px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 12px;
+  display: block;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+}
+
+/* Desktop/laptop: barista fills bottom space perfectly (sidebar 280px wide) */
+@media (min-width: 769px) {
+  .nav-barista {
+    padding: 1.25rem 1rem 1.5rem;
+    cursor: default;
+  }
+  .nav-barista img {
+    max-height: min(42vh, 320px);
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
 }
 
 /* Main content area — offset when side nav is visible on desktop */
@@ -1693,6 +1776,23 @@ img {
     box-shadow: 4px 0 24px rgba(139, 41, 66, 0.4);
   }
 
+  /* Barista at bottom of nav on mobile — tap to switch boy/girl */
+  .nav-barista {
+    padding: 1rem 1rem max(1.5rem, env(safe-area-inset-bottom));
+    cursor: pointer;
+  }
+  .nav-barista img {
+    max-height: min(38vh, 240px);
+    object-position: center center;
+  }
+  .nav-barista-hint {
+    display: block;
+    text-align: center;
+    font-size: 0.8rem;
+    color: rgba(255, 245, 247, 0.8);
+    margin-top: 0.5rem;
+  }
+
   .main-content {
     margin-left: 0;
     padding: 5rem 1.25rem 2rem;
@@ -2025,5 +2125,55 @@ img {
   .footer-content {
     grid-template-columns: 1fr;
     gap: 2rem;
+  }
+}
+
+/* ——— Print styles (menu & specials) ——— */
+@media print {
+  .skip-link,
+  .nav-toggle,
+  .nav-overlay,
+  .side-nav,
+  .back-to-top,
+  .site-footer,
+  .special-price-hearts,
+  .heart-pop {
+    display: none !important;
+  }
+
+  body {
+    background: #fff;
+  }
+
+  .main-content {
+    margin-left: 0 !important;
+    padding: 1rem !important;
+    max-width: none;
+  }
+
+  /* Show all sections when printing (full menu, specials, location) */
+  .content-section {
+    display: block !important;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .special-price {
+    animation: none;
+    box-shadow: none;
+    border: 2px dashed #ccc;
+  }
+
+  .price-amount {
+    animation: none;
+  }
+
+  a[href^="tel:"],
+  a[href^="mailto:"] {
+    text-decoration: underline;
+  }
+
+  img {
+    max-width: 100%;
   }
 }
