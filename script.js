@@ -4,14 +4,6 @@
   var nav = document.getElementById('side-nav');
   var overlay = document.getElementById('nav-overlay');
   var body = document.body;
-  var baristaImages = ['images/barista/barista-1.png', 'images/barista/barista-2.png'];
-
-  function setRandomBarista() {
-    var baristaImg = document.getElementById('nav-barista-img');
-    if (baristaImg) {
-      baristaImg.src = baristaImages[Math.floor(Math.random() * baristaImages.length)];
-    }
-  }
 
   function openNav() {
     body.classList.add('nav-open');
@@ -20,14 +12,6 @@
       btn.setAttribute('aria-expanded', 'true');
     }
     document.documentElement.style.overflow = 'hidden';
-    if (window.innerWidth > 768) setRandomBarista();
-  }
-
-  function switchBarista() {
-    if (window.innerWidth > 768) return;
-    var baristaImg = document.getElementById('nav-barista-img');
-    if (!baristaImg) return;
-    baristaImg.src = baristaImg.src.indexOf('barista-1') !== -1 ? baristaImages[1] : baristaImages[0];
   }
 
   function closeNav() {
@@ -49,21 +33,6 @@
   }
   if (overlay) {
     overlay.addEventListener('click', closeNav);
-  }
-
-  setRandomBarista();
-
-  var baristaArea = document.querySelector('.nav-barista');
-  if (baristaArea) {
-    baristaArea.addEventListener('click', function () {
-      switchBarista();
-    });
-    baristaArea.addEventListener('keydown', function (e) {
-      if ((e.key === 'Enter' || e.key === ' ') && window.innerWidth <= 768) {
-        e.preventDefault();
-        switchBarista();
-      }
-    });
   }
 
   // Function to show a content section
