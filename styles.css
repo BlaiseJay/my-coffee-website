@@ -435,6 +435,10 @@ body {
   font-size: 0.9rem;
   color: #6b2d3a;
   margin: 0;
+  padding: 0.4rem 0.6rem;
+  background: rgba(255, 230, 240, 0.6);
+  border-radius: 8px;
+  border-left: 3px solid rgba(196, 30, 58, 0.35);
 }
 
 .special-price {
@@ -762,6 +766,10 @@ body {
   color: var(--menu-text-muted);
   line-height: 1.5;
   font-size: 0.95rem;
+  padding: 0.4rem 0.6rem;
+  background: rgba(255, 230, 240, 0.6);
+  border-radius: 8px;
+  border-left: 3px solid rgba(196, 30, 58, 0.35);
 }
 
 .best-seller-price {
@@ -1148,6 +1156,10 @@ body {
   margin: 0;
   width: 100%;
   order: 2;
+  padding: 0.4rem 0.6rem;
+  background: rgba(255, 230, 240, 0.6);
+  border-radius: 8px;
+  border-left: 3px solid rgba(196, 30, 58, 0.35);
 }
 
 .menu-product-price {
