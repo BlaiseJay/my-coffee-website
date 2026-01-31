@@ -376,21 +376,30 @@ body {
   letter-spacing: 0.5px;
 }
 
+/* Package title — highlighted */
 .special-title {
   font-family: 'DM Serif Display', serif;
-  font-size: 1.75rem;
-  color: #c41e3a;
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: var(--valentine-wine);
   margin: 1rem 0;
+  letter-spacing: 0.02em;
 }
 
+/* Intro description — block style */
 .special-description {
-  font-size: 1.1rem;
-  color: #6b2d3a;
+  font-size: 1.05rem;
+  color: var(--menu-text-muted);
   line-height: 1.6;
   margin-bottom: 2rem;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
+  padding: 0.75rem 1rem;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
+  border-left: 4px solid var(--menu-accent-light);
+  box-shadow: 0 2px 6px rgba(196, 30, 58, 0.08);
 }
 
 .special-items {
@@ -424,33 +433,76 @@ body {
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
 }
 
-.item-details h4 {
-  font-size: 1.1rem;
-  color: #c41e3a;
-  margin: 0 0 0.25rem 0;
-  font-weight: 600;
+.item-details {
+  width: 100%;
+  min-width: 0;
 }
 
+/* Name + price row — highlighted like menu */
+.item-name-price {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.item-details h4 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--valentine-wine);
+  margin: 0;
+  line-height: 1.3;
+  letter-spacing: 0.01em;
+  flex: 1;
+  min-width: 0;
+}
+
+.item-price-pill {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--valentine-wine);
+  font-family: 'DM Serif Display', serif;
+  white-space: nowrap;
+  padding: 0.25rem 0.6rem;
+  background: rgba(255, 107, 157, 0.12);
+  border-radius: 999px;
+  border: 1px solid rgba(255, 107, 157, 0.2);
+  flex-shrink: 0;
+}
+
+/* Item description — block style */
 .item-details p {
   font-size: 0.9rem;
-  color: #6b2d3a;
+  color: var(--menu-text-muted);
+  line-height: 1.55;
   margin: 0;
+  padding: 0.5rem 0.75rem;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 8px;
+  border-left: 3px solid var(--menu-accent-light);
+  box-shadow: 0 1px 3px rgba(196, 30, 58, 0.06);
+  width: 100%;
+  box-sizing: border-box;
 }
 
+/* Price block — highlighted */
 .special-price {
   margin: 2rem 0;
-  padding: 1.5rem;
+  padding: 1.5rem 1.75rem;
   background: linear-gradient(135deg, #fff 0%, #ffe6e6 100%);
   border-radius: 15px;
   border: 2px dashed #ff6b9d;
+  box-shadow: 0 4px 14px rgba(196, 30, 58, 0.1);
 }
 
 .price-label {
   display: block;
   font-size: 0.95rem;
-  color: #6b2d3a;
-  margin-bottom: 0.5rem;
-  font-weight: 500;
+  font-weight: 600;
+  color: var(--valentine-wine);
+  margin-bottom: 0.35rem;
 }
 
 .price-regular {
@@ -465,24 +517,19 @@ body {
   display: block;
   font-family: 'DM Serif Display', serif;
   font-size: 2.5rem;
-  color: #c41e3a;
-  font-weight: bold;
+  font-weight: 700;
+  color: var(--valentine-wine);
   margin: 0.5rem 0;
   text-shadow: 0 2px 4px rgba(196, 30, 58, 0.2);
+  letter-spacing: 0.02em;
 }
 
 .price-note {
   display: block;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
+  font-weight: 700;
   color: #ff1744;
-  font-weight: 600;
   margin-top: 0.5rem;
-}
-
-.item-price-inline {
-  font-size: 0.85em;
-  color: #888;
-  font-weight: 500;
 }
 
 .special-footer {
@@ -748,27 +795,45 @@ body {
   align-items: flex-start;
   justify-content: space-between;
   gap: 0.75rem;
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.4rem;
 }
 
+/* Name + price — highlighted like menu */
 .best-seller-card h3 {
   margin: 0;
-  font-size: 1.05rem;
-  color: var(--menu-text);
-}
-
-.best-seller-card p {
-  margin: 0.25rem 0 0;
-  color: var(--menu-text-muted);
-  line-height: 1.5;
-  font-size: 0.95rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--valentine-wine);
+  line-height: 1.3;
+  letter-spacing: 0.01em;
+  flex: 1;
+  min-width: 0;
 }
 
 .best-seller-price {
   white-space: nowrap;
-  font-weight: 800;
+  font-weight: 700;
   color: var(--valentine-wine);
-  font-size: 0.95rem;
+  font-size: 1rem;
+  font-family: 'DM Serif Display', serif;
+  padding: 0.25rem 0.6rem;
+  background: rgba(255, 107, 157, 0.12);
+  border-radius: 999px;
+  border: 1px solid rgba(255, 107, 157, 0.2);
+  flex-shrink: 0;
+}
+
+/* Description — subtle block for readability */
+.best-seller-card p {
+  margin: 0.4rem 0 0;
+  color: var(--menu-text-muted);
+  line-height: 1.55;
+  font-size: 0.9rem;
+  padding: 0.5rem 0.75rem;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 8px;
+  border-left: 3px solid var(--menu-accent-light);
+  box-shadow: 0 1px 3px rgba(196, 30, 58, 0.06);
 }
 
 @media (max-width: 768px) {
@@ -993,16 +1058,21 @@ body {
   white-space: nowrap;
 }
 
-.menu-section-icon {
-  font-size: 1.5rem;
-  line-height: 1;
-}
-
 .menu-section-sizes {
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto 1.5rem;
   text-align: center;
-  font-size: 0.9rem;
-  color: var(--menu-text-muted);
-  margin-bottom: 1.5rem !important;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--valentine-wine);
+  padding: 0.5rem 1.25rem;
+  background: rgba(255, 107, 157, 0.12);
+  border: 1px solid rgba(255, 107, 157, 0.25);
+  border-radius: 999px;
+  letter-spacing: 0.03em;
+  box-shadow: 0 2px 8px rgba(196, 30, 58, 0.08);
 }
 
 .menu-category-desc {
@@ -1130,32 +1200,47 @@ body {
   flex-wrap: wrap;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 0.25rem 1rem;
+  gap: 0.35rem 1rem;
 }
 
+/* Name + price row — highlighted */
 .menu-product-body h3 {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: var(--menu-text);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--valentine-wine);
   margin: 0;
   line-height: 1.3;
-}
-
-.menu-product-body p {
-  font-size: 0.9rem;
-  line-height: 1.5;
-  color: var(--menu-text-muted);
-  margin: 0;
-  width: 100%;
-  order: 2;
+  letter-spacing: 0.01em;
+  flex: 1;
+  min-width: 0;
 }
 
 .menu-product-price {
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--menu-text);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--valentine-wine);
   white-space: nowrap;
   font-family: 'DM Serif Display', serif;
+  padding: 0.25rem 0.6rem;
+  background: rgba(255, 107, 157, 0.12);
+  border-radius: 999px;
+  border: 1px solid rgba(255, 107, 157, 0.2);
+  flex-shrink: 0;
+}
+
+/* Description — subtle block for readability */
+.menu-product-body p {
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--menu-text-muted);
+  margin: 0.4rem 0 0;
+  width: 100%;
+  order: 2;
+  padding: 0.5rem 0.75rem;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 8px;
+  border-left: 3px solid var(--menu-accent-light);
+  box-shadow: 0 1px 3px rgba(196, 30, 58, 0.06);
 }
 
 .product-badge {
@@ -1574,10 +1659,6 @@ body {
     padding: 0.3rem 0.5rem;
     font-size: 0.8rem;
     gap: 0.2rem;
-  }
-
-  .menu-tab-icon {
-    font-size: 1.1rem;
   }
 
   .logo-container {
