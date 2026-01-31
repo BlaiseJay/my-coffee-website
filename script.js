@@ -7,15 +7,19 @@
 
   function openNav() {
     body.classList.add('nav-open');
-    btn.setAttribute('aria-label', 'Close menu');
-    btn.setAttribute('aria-expanded', 'true');
+    if (btn) {
+      btn.setAttribute('aria-label', 'Close menu');
+      btn.setAttribute('aria-expanded', 'true');
+    }
     document.documentElement.style.overflow = 'hidden';
   }
 
   function closeNav() {
     body.classList.remove('nav-open');
-    btn.setAttribute('aria-label', 'Open menu');
-    btn.setAttribute('aria-expanded', 'false');
+    if (btn) {
+      btn.setAttribute('aria-label', 'Open menu');
+      btn.setAttribute('aria-expanded', 'false');
+    }
     document.documentElement.style.overflow = '';
   }
 
@@ -382,8 +386,12 @@
       hoursEl.textContent = '00';
       minutesEl.textContent = '00';
       secondsEl.textContent = '00';
-      if (countdownTimer.parentElement) {
-        countdownTimer.innerHTML = '<p style="color: var(--valentine-rose); font-weight: 600;">⏰ This offer has ended</p>';
+      if (countdownTimer && countdownTimer.parentElement) {
+        var ended = document.createElement('p');
+        ended.style.cssText = 'color: var(--valentine-rose); font-weight: 600;';
+        ended.textContent = '⏰ This offer has ended';
+        countdownTimer.innerHTML = '';
+        countdownTimer.appendChild(ended);
       }
       return;
     }
@@ -432,5 +440,120 @@
 
     // Initial check
     toggleBackToTop();
+  }
+
+  // Gallery & Product Image Lightbox (tap/click image to view bigger)
+  function initLightbox() {
+    var lightbox = document.getElementById('lightbox');
+    var lightboxImg = document.getElementById('lightbox-img');
+    var lightboxCaption = document.getElementById('lightbox-caption');
+    if (!lightbox || !lightboxImg || !lightboxCaption) return;
+
+    function openLightbox(src, caption) {
+      lightboxImg.src = src;
+      lightboxImg.alt = caption || 'Gallery image';
+      lightboxCaption.textContent = caption || '';
+      lightbox.classList.add('is-open');
+      lightbox.setAttribute('aria-hidden', 'false');
+      document.documentElement.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('is-open');
+      lightbox.setAttribute('aria-hidden', 'true');
+      lightboxImg.src = '';
+      lightboxCaption.textContent = '';
+      document.documentElement.style.overflow = '';
+    }
+
+    // Open on gallery image click
+    document.querySelectorAll('#gallery .gallery-item img').forEach(function (img) {
+      img.style.cursor = 'zoom-in';
+      img.addEventListener('click', function () {
+        var src = img.currentSrc || img.getAttribute('src') || '';
+        // If it’s an Unsplash thumbnail, load a higher-res version
+        if (src.indexOf('images.unsplash.com') !== -1) {
+          src = src.replace(/w=\d+/g, 'w=1400').replace(/h=\d+/g, 'h=1400');
+        }
+        openLightbox(src, img.getAttribute('alt') || '');
+      });
+    });
+
+    // Open on menu product image click (click photo to view bigger)
+    var menuSection = document.getElementById('menu');
+    if (menuSection) {
+      menuSection.addEventListener('click', function (e) {
+        var img = e.target.closest('.menu-product-img img') || e.target.closest('.menu-product-img');
+        if (!img) return;
+        var photo = img.tagName === 'IMG' ? img : img.querySelector('img');
+        if (!photo) return;
+        e.preventDefault();
+        e.stopPropagation();
+        var src = photo.currentSrc || photo.getAttribute('src') || '';
+        if (!src) return;
+        var card = photo.closest('.menu-product-card');
+        var caption = '';
+        if (card) {
+          var heading = card.querySelector('.menu-product-body h3');
+          if (heading) caption = heading.textContent.replace(/\s+/g, ' ').trim();
+        }
+        if (!caption) caption = photo.getAttribute('alt') || 'Product';
+        openLightbox(src, caption);
+      });
+      // Make all menu product image areas look clickable
+      menuSection.querySelectorAll('.menu-product-img').forEach(function (el) {
+        el.style.cursor = 'pointer';
+        el.setAttribute('title', 'Click to view larger');
+      });
+    }
+
+    // Open on Home Best Sellers image click (click photo to view bigger)
+    var homeSection = document.getElementById('home');
+    if (homeSection) {
+      homeSection.addEventListener('click', function (e) {
+        var media = e.target.closest('.best-seller-media img') || e.target.closest('.best-seller-media');
+        if (!media) return;
+        var photo = media.tagName === 'IMG' ? media : media.querySelector('img');
+        if (!photo) return;
+        e.preventDefault();
+        e.stopPropagation();
+        var src = photo.currentSrc || photo.getAttribute('src') || '';
+        if (!src) return;
+        if (src.indexOf('images.unsplash.com') !== -1) {
+          src = src.replace(/w=\d+/g, 'w=1400').replace(/h=\d+/g, 'h=1400');
+        }
+        var card = photo.closest('.best-seller-card');
+        var caption = '';
+        if (card) {
+          var heading = card.querySelector('.best-seller-info h3');
+          if (heading) caption = heading.textContent.replace(/\s+/g, ' ').trim();
+        }
+        if (!caption) caption = photo.getAttribute('alt') || 'Best Seller';
+        openLightbox(src, caption);
+      });
+      homeSection.querySelectorAll('.best-seller-media').forEach(function (el) {
+        el.style.cursor = 'pointer';
+        el.setAttribute('title', 'Click to view larger');
+      });
+    }
+
+    // Close on backdrop / close button
+    lightbox.querySelectorAll('[data-lightbox-close]').forEach(function (el) {
+      el.addEventListener('click', function () {
+        closeLightbox();
+      });
+    });
+
+    // Close on ESC
+    window.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && lightbox.classList.contains('is-open')) {
+        closeLightbox();
+      }
+    });
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initLightbox);
+  } else {
+    initLightbox();
   }
 })();
