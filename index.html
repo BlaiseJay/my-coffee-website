@@ -81,6 +81,7 @@
   </script>
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
   <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="side-nav">
     <span class="hamburger" aria-hidden="true">
       <span></span>
@@ -111,9 +112,13 @@
       <li><a href="#gallery"><span class="icon" aria-hidden="true">🖼️</span> Gallery</a></li>
       <li><a href="#location"><span class="icon" aria-hidden="true">📍</span> Location</a></li>
     </ul>
+    <div class="nav-barista" aria-hidden="true" role="button" tabindex="0" aria-label="Tap to switch barista (mobile)">
+      <img id="nav-barista-img" src="images/barista/barista-2.png" alt="Barista">
+      <span class="nav-barista-hint">Tap to switch</span>
+    </div>
   </nav>
 
-  <main class="main-content">
+  <main class="main-content" id="main-content">
     <!-- Home Section -->
     <section id="home" class="content-section active">
       <h1>Welcome to Coffee Shop</h1>
@@ -594,12 +599,12 @@
       <div class="contact-grid">
         <div class="contact-card">
           <h2>📞 Phone</h2>
-          <p>+63 XXX XXX XXXX</p>
+          <p><a href="tel:+63000000000" class="contact-link">+63 XXX XXX XXXX</a></p>
         </div>
         
         <div class="contact-card">
           <h2>✉️ Email</h2>
-          <p>your-email@example.com</p>
+          <p><a href="mailto:your-email@example.com" class="contact-link">your-email@example.com</a></p>
         </div>
         
         <div class="contact-card">
@@ -634,8 +639,8 @@
         <h4>Contact</h4>
         <p>📍 Your Street Address<br>
         Your City, Your Province, Your ZIP</p>
-        <p>📞 +63 XXX XXX XXXX<br>
-        ✉️ your-email@example.com</p>
+        <p>📞 <a href="tel:+63000000000" class="footer-contact-link">+63 XXX XXX XXXX</a><br>
+        ✉️ <a href="mailto:your-email@example.com" class="footer-contact-link">your-email@example.com</a></p>
       </div>
       <div class="footer-section">
         <h4>Follow Us</h4>
